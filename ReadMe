@@ -1,0 +1,14 @@
+Instructions to use and run the Character Device Driver module:
+
+Copy the files char_driver.c, Makefile and userapp.c to a virtual Linux machine
+and follow the steps as mentioned below:
+
+1. Compile the device driver using the command: $ make
+
+2. Load the module: $ sudo insmod char_driver.ko NUM_DEVICES=<Number_of_devices>
+
+3. Compile userapp for testing the driver: $ make app
+
+4. Run userapp: $ sudo ./userapp <device_number>
+
+5. Unload module : $ sudo rmmod char_driver
